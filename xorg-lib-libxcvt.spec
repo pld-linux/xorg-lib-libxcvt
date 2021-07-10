@@ -2,7 +2,7 @@ Summary:	Library to generate VESA CVT standard timing modelines
 Summary(pl.UTF-8):	Biblioteka do generowania linii trybów graficznych z czasami zgodnymi z VESA CVT
 Name:		xorg-lib-libxcvt
 Version:	0.1.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libxcvt-%{version}.tar.xz
@@ -84,11 +84,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING README.md
-%attr(755,root,root) %{_bindir}/cvt
 %attr(755,root,root) %{_libdir}/libxcvt.so
-%{_mandir}/man1/cvt.1*
 
 %files devel
 %defattr(644,root,root,755)
 %{_includedir}/libxcvt
 %{_pkgconfigdir}/libxcvt.pc
+
+%files tools
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/cvt
+%{_mandir}/man1/cvt.1*

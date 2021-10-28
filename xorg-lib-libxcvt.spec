@@ -84,14 +84,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING README.md
-%attr(755,root,root) %{_libdir}/libxcvt.so.0
 %attr(755,root,root) %{_libdir}/libxcvt.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxcvt.so.0
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libxcvt.so
 %{_includedir}/libxcvt
 %{_pkgconfigdir}/libxcvt.pc
-%attr(755,root,root) %{_libdir}/libxcvt.so
 
 %files tools
 %defattr(644,root,root,755)

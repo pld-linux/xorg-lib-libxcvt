@@ -11,7 +11,7 @@ URL:		https://xorg.freedesktop.org/
 BuildRequires:	meson >= 0.40.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -66,7 +66,7 @@ użyciu standardu VESA Coordinated Video Timing.
 %setup -q -n libxcvt-%{version}
 
 %build
-%meson build
+%meson
 
 %ninja_build -C build
 
